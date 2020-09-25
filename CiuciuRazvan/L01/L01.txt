@@ -1,0 +1,11 @@
+Functionalitati ale aplicatiei Stackoverflow:
+
+-> Se poate crea cont personal;
+-> Se pot pune intrebari, la care cei care au cont pot raspunde(poate fi considerat ca un forum);
+-> Se pot adauga solutii pentru rezolvarea unei probleme;
+-> Se poate vizualiza tot istoricul unei postari;
+-> Are o baza de date unde sunt stocati toti cei care au cont;
+-> Se pot vota raspunsurile cele mai bune;
+-> Nu se axeaza pe un singur limbaj de programare;
+-> Se pot cauta job-uri;
+
