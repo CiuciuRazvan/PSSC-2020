@@ -1,0 +1,38 @@
+Question workflow
+
+Workflows
+● Bounded context: “Question context"
+	○ Workflow: “Add question”
+		■ Triggered by: “User ”;
+		■ Input: “Question  form” (title, body, tags);
+		■ Other inputs(dependencies);
+		■ Output: “Question added” event;
+		■ Side effects: User is being notified;
+
+Workflows documentation
+● Workflow: “Add question”
+	○ Input: “Question  form”;
+	○ Output: “Question added” event ;
+//step1
+	Create question  form
+	If form is invalid then
+	stop
+//step2
+	Review question form
+//step3 
+	Send notification to confirm the created question
+//step4 
+	return “Question added” event
+
+● Substep “Validate question  form”
+	○ input: “Unvalidated question  form”;
+	○ output: “Validated question  form”;
+	○ dependencies: "Confirmation";
+● validate the question title
+● validate the question body
+● validate the question tags
+● If all validations are passed then
+	■ return validated question  form
+	■ user gets the confirmation
+● Else return Validation error
+	■ Return validation error
