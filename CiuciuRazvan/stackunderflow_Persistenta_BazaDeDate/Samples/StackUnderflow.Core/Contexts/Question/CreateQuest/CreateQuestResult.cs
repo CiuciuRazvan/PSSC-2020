@@ -9,7 +9,9 @@ using System.Text;
 
 namespace StackUnderflow.Domain.Core.Contexts.Question.CreateQuest
 {
-    public static class CreateQuestResult
+    [AsChoice]
+
+    public static partial class CreateQuestResult
     {
         public interface ICreateQuestResult : IDynClonable { }
 
@@ -17,9 +19,10 @@ namespace StackUnderflow.Domain.Core.Contexts.Question.CreateQuest
             {
             public User Author { get; }
             public Post Question { get; }
-            public QuestCreated(Post post)
+            public QuestCreated(Post post, User author)
             {
                 Question = post;
+                Author = author;
             }
 
             public object Clone() => this.ShallowClone();

@@ -40,7 +40,7 @@ namespace StackUnderflow.Domain.Core.Contexts.Question
                 return new QuestNotCreated();
             if (state.Questions.All(p => p.PostId != post.PostId))
                 state.Questions.Add(post);
-            return new QuestCreated(post);
+            return new QuestCreated(post,post.TenantUser.User);
         }
 
         private Post CreateQuestFromCommand(CreateQuestCmd cmd)
@@ -48,8 +48,8 @@ namespace StackUnderflow.Domain.Core.Contexts.Question
             var question = new Post()
             {
                 Title = cmd.Title,
-                PostBody = cmd.Body,
-                PostTags = cmd.Tags
+                PostText = cmd.Body,
+                PostTag = cmd.Tags
             };
             return question;
         }

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace StackUnderflow.Domain.Core.Contexts.Question.CreateQuest
 {
-    public class CreateQuestCmd
+    public struct CreateQuestCmd
     {
         public  CreateQuestCmd(Guid userId, string title, string body, HashSet<PostTag> tags)
         {
